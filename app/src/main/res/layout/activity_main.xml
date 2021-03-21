@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/calc_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_weight="1"
+        android:background="@color/gray"
+        android:gravity="bottom|right"
+        android:text="0"
+        android:textSize="40sp" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:gravity="center">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            android:padding="0dp">
+
+            <Button
+                android:id="@+id/buAc"
+                style="@style/calc_small_btn_gray"
+                android:layout_margin="0dp"
+                android:onClick="buClear"
+                android:text="AC"
+                app:backgroundTint="#ECECEC" />
+
+            <Button
+                android:id="@+id/buPM"
+                style="@style/calc_small_btn_gray"
+                android:onClick="buNumberSelect"
+                android:text="+/-" />
+
+            <Button
+                android:id="@+id/buPG"
+                style="@style/calc_small_btn_gray"
+                android:onClick="buPercent"
+                android:text="%" />
+
+            <Button
+                android:id="@+id/buDiv"
+                style="@style/calc_small_btn_orange"
+                android:onClick="buOpEvent"
+                android:text="/"
+                app:strokeColor="#FFFFFF" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/bu7"
+                style="@style/calc_small_btn_gray"
+                android:onClick="buNumberSelect"
+                android:text="7" />
+
+            <Button
+                android:id="@+id/bu8"
+                style="@style/calc_small_btn_gray"
+                android:onClick="buNumberSelect"
+                android:text="8" />
+
+            <Button
+                android:id="@+id/bu9"
+                style="@style/calc_small_btn_gray"
+                android:onClick="buNumberSelect"
+                android:text="9" />
+
+            <Button
+                android:id="@+id/buMul"
+                style="@style/calc_small_btn_orange"
+                android:onClick="buOpEvent"
+                android:text="x" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/bu4"
+                style="@style/calc_small_btn_gray"
+                android:onClick="buNumberSelect"
+                android:text="4" />
+
+            <Button
+                android:id="@+id/bu5"
+                style="@style/calc_small_btn_gray"
+                android:onClick="buNumberSelect"
+                android:text="5" />
+
+            <Button
+                android:id="@+id/bu6"
+                style="@style/calc_small_btn_gray"
+                android:onClick="buNumberSelect"
+                android:text="6" />
+
+            <Button
+                android:id="@+id/buMinus"
+                style="@style/calc_small_btn_orange"
+                android:onClick="buOpEvent"
+                android:text="-" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/bu1"
+                style="@style/calc_small_btn_gray"
+                android:onClick="buNumberSelect"
+                android:text="1" />
+
+            <Button
+                android:id="@+id/bu2"
+                style="@style/calc_small_btn_gray"
+                android:onClick="buNumberSelect"
+                android:text="2" />
+
+            <Button
+                android:id="@+id/bu3"
+                style="@style/calc_small_btn_gray"
+                android:onClick="buNumberSelect"
+                android:text="3" />
+
+            <Button
+                android:id="@+id/buPlus"
+                style="@style/calc_small_btn_orange"
+                android:onClick="buOpEvent"
+                android:text="+" />
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bu0"
+            style="@style/calc_small_btn_gray"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_weight="2"
+            android:onClick="buNumberSelect"
+            android:text="0"
+            android:textColor="@color/black"
+            app:backgroundTint="@color/btn_gray" />
+
+        <Button
+            android:id="@+id/buDot"
+            style="@style/calc_small_btn_gray"
+            android:layout_weight="1"
+            android:onClick="buNumberSelect"
+            android:text="."
+            app:backgroundTint="@color/btn_gray" />
+
+        <Button
+            android:id="@+id/buEquals"
+            style="@style/calc_small_btn_orange"
+            android:layout_weight="1"
+            android:onClick="buEqual"
+            android:text="="
+            app:backgroundTint="@color/btn_orange" />
+    </LinearLayout>
+
+</LinearLayout>
